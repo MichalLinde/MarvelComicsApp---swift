@@ -99,6 +99,7 @@
 		907FE38C2897BE2200111991 /* marvel-app */ = {
 			isa = PBXGroup;
 			children = (
+				907FE3BD2897BF1A00111991 /* core */,
 				907FE38D2897BE2200111991 /* AppDelegate.swift */,
 				907FE38F2897BE2200111991 /* SceneDelegate.swift */,
 				907FE3912897BE2200111991 /* ViewController.swift */,
@@ -125,6 +126,29 @@
 				907FE3B02897BE2300111991 /* marvel_appUITestsLaunchTests.swift */,
 			);
 			path = "marvel-appUITests";
+			sourceTree = "<group>";
+		};
+		907FE3BD2897BF1A00111991 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				907FE3BF2897BF2E00111991 /* network */,
+				907FE3BE2897BF2400111991 /* models */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		907FE3BE2897BF2400111991 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		907FE3BF2897BF2E00111991 /* network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
