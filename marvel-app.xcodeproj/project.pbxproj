@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		907AC7AA289BE86D0002CE3F /* TableConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907AC7A9289BE86D0002CE3F /* TableConstants.swift */; };
 		907FE38E2897BE2200111991 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FE38D2897BE2200111991 /* AppDelegate.swift */; };
 		907FE3902897BE2200111991 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FE38F2897BE2200111991 /* SceneDelegate.swift */; };
 		907FE3922897BE2200111991 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FE3912897BE2200111991 /* HomePageViewController.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		907AC7A9289BE86D0002CE3F /* TableConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableConstants.swift; sourceTree = "<group>"; };
 		907FE38A2897BE2200111991 /* marvel-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		907FE38D2897BE2200111991 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		907FE38F2897BE2200111991 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		907AC7A8289BE8460002CE3F /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				907AC7A9289BE86D0002CE3F /* TableConstants.swift */,
+			);
+			path = constants;
+			sourceTree = "<group>";
+		};
 		907FE3812897BE2100111991 = {
 			isa = PBXGroup;
 			children = (
@@ -129,12 +139,12 @@
 		907FE38C2897BE2200111991 /* marvel-app */ = {
 			isa = PBXGroup;
 			children = (
+				907AC7A8289BE8460002CE3F /* constants */,
 				907FE3D82897F3B700111991 /* features */,
 				907FE3D02897CBA400111991 /* utils */,
 				907FE3BD2897BF1A00111991 /* core */,
 				907FE38D2897BE2200111991 /* AppDelegate.swift */,
 				907FE38F2897BE2200111991 /* SceneDelegate.swift */,
-				907FE3912897BE2200111991 /* HomePageViewController.swift */,
 				907FE3962897BE2300111991 /* Assets.xcassets */,
 				907FE3982897BE2300111991 /* LaunchScreen.storyboard */,
 				907FE39B2897BE2300111991 /* Info.plist */,
@@ -220,6 +230,7 @@
 		907FE3D92897F3C900111991 /* home-page */ = {
 			isa = PBXGroup;
 			children = (
+				907FE3912897BE2200111991 /* HomePageViewController.swift */,
 				907FE3DC2897F4BA00111991 /* HomePageViewModel.swift */,
 				907FE3DE28980A0F00111991 /* HomePageView.swift */,
 				90D7BE4F2898FD07000D063A /* HomePageViewModelEvents.swift */,
@@ -371,6 +382,7 @@
 				907FE3CD2897C5CF00111991 /* ComicDataContainer.swift in Sources */,
 				90D7BE502898FD07000D063A /* HomePageViewModelEvents.swift in Sources */,
 				907FE3C72897C45B00111991 /* CreatorList.swift in Sources */,
+				907AC7AA289BE86D0002CE3F /* TableConstants.swift in Sources */,
 				907FE3C32897C31400111991 /* Url.swift in Sources */,
 				90D7BE5228993AEB000D063A /* ListCard.swift in Sources */,
 				907FE3CF2897C63700111991 /* ComicDataWrapper.swift in Sources */,

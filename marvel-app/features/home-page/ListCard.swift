@@ -39,17 +39,48 @@ class ListCard: UITableViewCell{
     func setupLayout(){
         self.addSubview(card)
 
-        card.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 10, paddingRight: 10)
+        card.anchor(top: self.topAnchor,
+                    left: self.leftAnchor,
+                    bottom: self.bottomAnchor,
+                    right: self.rightAnchor,
+                    paddingTop: TableConstants.tableItemPadding,
+                    paddingLeft: TableConstants.tableItemPadding,
+                    paddingBottom: TableConstants.tableItemPadding,
+                    paddingRight: TableConstants.tableItemPadding)
         
         card.addSubviews(coverImageView, titleLabel, authorLabel, descriptionLabel)
         
-        coverImageView.anchor(top: card.topAnchor, left: card.leftAnchor, bottom: card.bottomAnchor, paddingRight: 5, width: 120, height: 200)
+        coverImageView.anchor(top: card.topAnchor,
+                              left: card.leftAnchor,
+                              bottom: card.bottomAnchor,
+                              paddingRight: TableConstants.betweenTextPadding,
+                              width: TableConstants.imageWidth,
+                              height: TableConstants.imageHeight)
         
-        titleLabel.anchor(top: card.topAnchor, left: coverImageView.rightAnchor, right: card.rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 5, width: frame.size.width / 2 )
+        titleLabel.anchor(top: card.topAnchor,
+                          left: coverImageView.rightAnchor,
+                          right: card.rightAnchor,
+                          paddingTop: TableConstants.betweenTextPadding,
+                          paddingLeft: TableConstants.betweenTextPadding,
+                          paddingBottom: TableConstants.betweenTextPadding,
+                          paddingRight: TableConstants.betweenTextPadding,
+                          width: frame.size.width / 2 )
         
-        authorLabel.anchor(top: titleLabel.bottomAnchor, left: coverImageView.rightAnchor, right: card.rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 5)
+        authorLabel.anchor(top: titleLabel.bottomAnchor,
+                           left: coverImageView.rightAnchor,
+                           right: card.rightAnchor,
+                           paddingTop: TableConstants.betweenTextPadding,
+                           paddingLeft: TableConstants.betweenTextPadding,
+                           paddingBottom: TableConstants.betweenTextPadding,
+                           paddingRight: TableConstants.betweenTextPadding)
         
-        descriptionLabel.anchor(top: authorLabel.bottomAnchor, left: coverImageView.rightAnchor, right: card.rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 5)
+        descriptionLabel.anchor(top: authorLabel.bottomAnchor,
+                                left: coverImageView.rightAnchor,
+                                right: card.rightAnchor,
+                                paddingTop: TableConstants.betweenTextPadding,
+                                paddingLeft: TableConstants.betweenTextPadding,
+                                paddingBottom: TableConstants.betweenTextPadding,
+                                paddingRight: TableConstants.betweenTextPadding)
     
         
     }
@@ -57,40 +88,36 @@ class ListCard: UITableViewCell{
     private lazy var card: UIView = {
        let card = UIView()
         card.backgroundColor = .white
-        card.layer.cornerRadius = 10.0
+        card.layer.cornerRadius = TableConstants.cornerRadius
         card.layer.shadowColor = UIColor.gray.cgColor
         card.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        card.layer.shadowRadius = 6.0
-        card.layer.shadowOpacity = 0.7
+        card.layer.shadowRadius = TableConstants.cardShadowRadius
+        card.layer.shadowOpacity = TableConstants.cardShadowOpacity
         return card
     }()
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "New Avengers #1 (2013), New Avengers #1 (2013), New Avengers #1 (2013)"
-        label.font = .systemFont(ofSize: 18, weight: .bold)
+        label.font = .systemFont(ofSize: TableConstants.titleFontSize, weight: .bold)
         label.textColor = .black
-        label.numberOfLines = 0
-        label.adjustsFontSizeToFitWidth = false
+        label.numberOfLines = .zero
         label.lineBreakMode = .byWordWrapping
         return label
     }()
     
     lazy var authorLabel: UILabel = {
         let label = UILabel()
-        label.text = "Written by Jonathan Hickman"
-        label.font = .systemFont(ofSize: 12)
+        label.font = .systemFont(ofSize: TableConstants.authorFontSize)
         label.textColor = .gray
-        label.numberOfLines = 0
+        label.numberOfLines = .zero
         return label
     }()
     
     lazy var descriptionLabel: UILabel = {
        let label = UILabel()
-        label.text = "Ant-Man digs deeper into finding out who is leaking those dirty little secrets that are threatening our national security. And who's better at uncovering dirty LITTLE secrets than him??"
-        label.font = .systemFont(ofSize: 14)
+        label.font = .systemFont(ofSize: TableConstants.descriptionFontSize)
         label.textColor = .black
-        label.numberOfLines = 4
+        label.numberOfLines = TableConstants.descriptionLinesNumber
         label.adjustsFontSizeToFitWidth = false
         label.lineBreakMode = .byTruncatingTail
         return label
@@ -98,7 +125,7 @@ class ListCard: UITableViewCell{
     
     lazy var coverImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.layer.cornerRadius = 10.0
+        imageView.layer.cornerRadius = TableConstants.cornerRadius
         imageView.clipsToBounds = true
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFit
