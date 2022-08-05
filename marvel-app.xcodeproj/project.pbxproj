@@ -30,8 +30,13 @@
 		907FE3DF28980A0F00111991 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FE3DE28980A0F00111991 /* HomePageView.swift */; };
 		907FE3E428980AAE00111991 /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FE3E228980AAE00111991 /* UIStackViewExtension.swift */; };
 		907FE3E528980AAE00111991 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FE3E328980AAE00111991 /* UIViewExtension.swift */; };
+		908357A9289BFD970061056E /* AlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908357A8289BFD970061056E /* AlamofireClient.swift */; };
 		90D7BE502898FD07000D063A /* HomePageViewModelEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7BE4F2898FD07000D063A /* HomePageViewModelEvents.swift */; };
 		90D7BE5228993AEB000D063A /* ListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7BE5128993AEB000D063A /* ListCard.swift */; };
+		90EE3C66289CEBBB00897870 /* AlamofireProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE3C65289CEBBB00897870 /* AlamofireProtocol.swift */; };
+		90EE3C6B289CF03B00897870 /* AlamofireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE3C6A289CF03B00897870 /* AlamofireViewModel.swift */; };
+		90EE3C6F289D1A7200897870 /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE3C6E289D1A7200897870 /* AlamofireViewController.swift */; };
+		E5B628238514B359D3827480 /* Pods_marvel_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC75861A2A178030349B3459 /* Pods_marvel_app.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F3BFB6551B802F8021298C9 /* Pods-marvel-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel-app.release.xcconfig"; path = "Target Support Files/Pods-marvel-app/Pods-marvel-app.release.xcconfig"; sourceTree = "<group>"; };
 		907AC7A9289BE86D0002CE3F /* TableConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableConstants.swift; sourceTree = "<group>"; };
 		907FE38A2897BE2200111991 /* marvel-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		907FE38D2897BE2200111991 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,8 +85,14 @@
 		907FE3DE28980A0F00111991 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		907FE3E228980AAE00111991 /* UIStackViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStackViewExtension.swift; path = "../../../../Desktop/Swift Utils/UIStackViewExtension.swift"; sourceTree = "<group>"; };
 		907FE3E328980AAE00111991 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = "../../../../Desktop/Swift Utils/UIViewExtension.swift"; sourceTree = "<group>"; };
+		908357A8289BFD970061056E /* AlamofireClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireClient.swift; sourceTree = "<group>"; };
 		90D7BE4F2898FD07000D063A /* HomePageViewModelEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModelEvents.swift; sourceTree = "<group>"; };
 		90D7BE5128993AEB000D063A /* ListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCard.swift; sourceTree = "<group>"; };
+		90EE3C65289CEBBB00897870 /* AlamofireProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireProtocol.swift; sourceTree = "<group>"; };
+		90EE3C6A289CF03B00897870 /* AlamofireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewModel.swift; sourceTree = "<group>"; };
+		90EE3C6E289D1A7200897870 /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
+		C3BB8333DD4762F0B2E7AFE9 /* Pods-marvel-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel-app.debug.xcconfig"; path = "Target Support Files/Pods-marvel-app/Pods-marvel-app.debug.xcconfig"; sourceTree = "<group>"; };
+		FC75861A2A178030349B3459 /* Pods_marvel_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marvel_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B628238514B359D3827480 /* Pods_marvel_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +136,8 @@
 				907FE3A32897BE2300111991 /* marvel-appTests */,
 				907FE3AD2897BE2300111991 /* marvel-appUITests */,
 				907FE38B2897BE2200111991 /* Products */,
+				FFBC6CD8295BBF8387BD12F1 /* Pods */,
+				99427565CD032BA618819960 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,6 +237,7 @@
 		907FE3D82897F3B700111991 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				90EE3C69289CF01200897870 /* alamofire */,
 				907FE3D92897F3C900111991 /* home-page */,
 			);
 			path = features;
@@ -239,6 +255,34 @@
 			path = "home-page";
 			sourceTree = "<group>";
 		};
+		90EE3C69289CF01200897870 /* alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				90EE3C65289CEBBB00897870 /* AlamofireProtocol.swift */,
+				908357A8289BFD970061056E /* AlamofireClient.swift */,
+				90EE3C6A289CF03B00897870 /* AlamofireViewModel.swift */,
+				90EE3C6E289D1A7200897870 /* AlamofireViewController.swift */,
+			);
+			path = alamofire;
+			sourceTree = "<group>";
+		};
+		99427565CD032BA618819960 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC75861A2A178030349B3459 /* Pods_marvel_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFBC6CD8295BBF8387BD12F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3BB8333DD4762F0B2E7AFE9 /* Pods-marvel-app.debug.xcconfig */,
+				4F3BFB6551B802F8021298C9 /* Pods-marvel-app.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,9 +290,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 907FE3B42897BE2300111991 /* Build configuration list for PBXNativeTarget "marvel-app" */;
 			buildPhases = (
+				68CFE93D0519CD3002668F43 /* [CP] Check Pods Manifest.lock */,
 				907FE3862897BE2100111991 /* Sources */,
 				907FE3872897BE2100111991 /* Frameworks */,
 				907FE3882897BE2100111991 /* Resources */,
+				710CD89EB946708E883C4B80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -364,17 +410,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		68CFE93D0519CD3002668F43 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-marvel-app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		710CD89EB946708E883C4B80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-marvel-app/Pods-marvel-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-marvel-app/Pods-marvel-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-marvel-app/Pods-marvel-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		907FE3862897BE2100111991 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				907FE3D22897CBB700111991 /* ApiConstants.swift in Sources */,
+				908357A9289BFD970061056E /* AlamofireClient.swift in Sources */,
 				907FE3E428980AAE00111991 /* UIStackViewExtension.swift in Sources */,
 				907FE3D72897E9AF00111991 /* ComicsRepository.swift in Sources */,
 				907FE3C92897C4FF00111991 /* Image.swift in Sources */,
 				907FE3CB2897C55D00111991 /* Comic.swift in Sources */,
 				907FE3C52897C41500111991 /* CreatorSummary.swift in Sources */,
+				90EE3C6F289D1A7200897870 /* AlamofireViewController.swift in Sources */,
 				907FE3922897BE2200111991 /* HomePageViewController.swift in Sources */,
 				907FE38E2897BE2200111991 /* AppDelegate.swift in Sources */,
 				907FE3E528980AAE00111991 /* UIViewExtension.swift in Sources */,
@@ -386,9 +476,11 @@
 				907FE3C32897C31400111991 /* Url.swift in Sources */,
 				90D7BE5228993AEB000D063A /* ListCard.swift in Sources */,
 				907FE3CF2897C63700111991 /* ComicDataWrapper.swift in Sources */,
+				90EE3C66289CEBBB00897870 /* AlamofireProtocol.swift in Sources */,
 				907FE3D42897D26000111991 /* ApiClient.swift in Sources */,
 				907FE3DF28980A0F00111991 /* HomePageView.swift in Sources */,
 				907FE3DD2897F4BA00111991 /* HomePageViewModel.swift in Sources */,
+				90EE3C6B289CF03B00897870 /* AlamofireViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +644,7 @@
 		};
 		907FE3B52897BE2300111991 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3BB8333DD4762F0B2E7AFE9 /* Pods-marvel-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -578,6 +671,7 @@
 		};
 		907FE3B62897BE2300111991 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F3BFB6551B802F8021298C9 /* Pods-marvel-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

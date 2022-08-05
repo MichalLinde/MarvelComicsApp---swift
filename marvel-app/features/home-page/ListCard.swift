@@ -46,7 +46,8 @@ class ListCard: UITableViewCell{
                     paddingTop: TableConstants.tableItemPadding,
                     paddingLeft: TableConstants.tableItemPadding,
                     paddingBottom: TableConstants.tableItemPadding,
-                    paddingRight: TableConstants.tableItemPadding)
+                    paddingRight: TableConstants.tableItemPadding,
+                    height: TableConstants.tableItemHeight)
         
         card.addSubviews(coverImageView, titleLabel, authorLabel, descriptionLabel)
         

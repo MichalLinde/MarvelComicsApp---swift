@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomePageViewController: UITableViewController, HomePageViewModelEvents{
+class HomePageViewController: UITableViewController{
     
     var viewModel = HomePageViewModel()
     var comics: ComicDataWrapper?
@@ -28,10 +28,6 @@ class HomePageViewController: UITableViewController, HomePageViewModelEvents{
         
         tableView.register(ListCard.self, forCellReuseIdentifier: "ComicsCell")
         tableView.separatorStyle = .none        
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return TableConstants.tableItemHeight
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -107,7 +103,7 @@ class HomePageViewController: UITableViewController, HomePageViewModelEvents{
     }
 }
 
-extension HomePageViewController{
+extension HomePageViewController: HomePageViewModelEvents{
     func comicsFetched(comics: ComicDataWrapper) {
         self.comics = comics
     }
