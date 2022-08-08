@@ -15,6 +15,7 @@ class HomePageViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel.delegate = self
+        self.navigationItem.title = "Marvel Comics"
         configureUI()
         
         Task{
@@ -24,7 +25,6 @@ class HomePageViewController: UITableViewController{
     
     private func configureUI(){
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "Marvel Comics"
         
         tableView.register(ListCard.self, forCellReuseIdentifier: "ComicsCell")
         tableView.separatorStyle = .none        

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		907872C928A0EB2B00189661 /* SearchPageViewModelEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907872C828A0EB2B00189661 /* SearchPageViewModelEvents.swift */; };
+		907872CB28A0EB8F00189661 /* SearchPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907872CA28A0EB8F00189661 /* SearchPageViewModel.swift */; };
+		907872CF28A11EB800189661 /* SearchPageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907872CE28A11EB800189661 /* SearchPageConstants.swift */; };
 		907AC7AA289BE86D0002CE3F /* TableConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907AC7A9289BE86D0002CE3F /* TableConstants.swift */; };
 		907FE38E2897BE2200111991 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FE38D2897BE2200111991 /* AppDelegate.swift */; };
 		907FE3902897BE2200111991 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FE38F2897BE2200111991 /* SceneDelegate.swift */; };
@@ -36,6 +39,7 @@
 		90EE3C66289CEBBB00897870 /* AlamofireProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE3C65289CEBBB00897870 /* AlamofireProtocol.swift */; };
 		90EE3C6B289CF03B00897870 /* AlamofireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE3C6A289CF03B00897870 /* AlamofireViewModel.swift */; };
 		90EE3C6F289D1A7200897870 /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE3C6E289D1A7200897870 /* AlamofireViewController.swift */; };
+		90EE3C72289D478300897870 /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE3C71289D478300897870 /* SearchPageViewController.swift */; };
 		E5B628238514B359D3827480 /* Pods_marvel_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC75861A2A178030349B3459 /* Pods_marvel_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +62,9 @@
 
 /* Begin PBXFileReference section */
 		4F3BFB6551B802F8021298C9 /* Pods-marvel-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel-app.release.xcconfig"; path = "Target Support Files/Pods-marvel-app/Pods-marvel-app.release.xcconfig"; sourceTree = "<group>"; };
+		907872C828A0EB2B00189661 /* SearchPageViewModelEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewModelEvents.swift; sourceTree = "<group>"; };
+		907872CA28A0EB8F00189661 /* SearchPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewModel.swift; sourceTree = "<group>"; };
+		907872CE28A11EB800189661 /* SearchPageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageConstants.swift; sourceTree = "<group>"; };
 		907AC7A9289BE86D0002CE3F /* TableConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableConstants.swift; sourceTree = "<group>"; };
 		907FE38A2897BE2200111991 /* marvel-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		907FE38D2897BE2200111991 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +98,7 @@
 		90EE3C65289CEBBB00897870 /* AlamofireProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireProtocol.swift; sourceTree = "<group>"; };
 		90EE3C6A289CF03B00897870 /* AlamofireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewModel.swift; sourceTree = "<group>"; };
 		90EE3C6E289D1A7200897870 /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
+		90EE3C71289D478300897870 /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
 		C3BB8333DD4762F0B2E7AFE9 /* Pods-marvel-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel-app.debug.xcconfig"; path = "Target Support Files/Pods-marvel-app/Pods-marvel-app.debug.xcconfig"; sourceTree = "<group>"; };
 		FC75861A2A178030349B3459 /* Pods_marvel_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marvel_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -125,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				907AC7A9289BE86D0002CE3F /* TableConstants.swift */,
+				907872CE28A11EB800189661 /* SearchPageConstants.swift */,
 			);
 			path = constants;
 			sourceTree = "<group>";
@@ -237,6 +246,7 @@
 		907FE3D82897F3B700111991 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				90EE3C70289D476900897870 /* search-page */,
 				90EE3C69289CF01200897870 /* alamofire */,
 				907FE3D92897F3C900111991 /* home-page */,
 			);
@@ -264,6 +274,16 @@
 				90EE3C6E289D1A7200897870 /* AlamofireViewController.swift */,
 			);
 			path = alamofire;
+			sourceTree = "<group>";
+		};
+		90EE3C70289D476900897870 /* search-page */ = {
+			isa = PBXGroup;
+			children = (
+				90EE3C71289D478300897870 /* SearchPageViewController.swift */,
+				907872C828A0EB2B00189661 /* SearchPageViewModelEvents.swift */,
+				907872CA28A0EB8F00189661 /* SearchPageViewModel.swift */,
+			);
+			path = "search-page";
 			sourceTree = "<group>";
 		};
 		99427565CD032BA618819960 /* Frameworks */ = {
@@ -458,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				907FE3D22897CBB700111991 /* ApiConstants.swift in Sources */,
+				907872CB28A0EB8F00189661 /* SearchPageViewModel.swift in Sources */,
 				908357A9289BFD970061056E /* AlamofireClient.swift in Sources */,
 				907FE3E428980AAE00111991 /* UIStackViewExtension.swift in Sources */,
 				907FE3D72897E9AF00111991 /* ComicsRepository.swift in Sources */,
@@ -468,6 +489,7 @@
 				907FE3922897BE2200111991 /* HomePageViewController.swift in Sources */,
 				907FE38E2897BE2200111991 /* AppDelegate.swift in Sources */,
 				907FE3E528980AAE00111991 /* UIViewExtension.swift in Sources */,
+				90EE3C72289D478300897870 /* SearchPageViewController.swift in Sources */,
 				907FE3902897BE2200111991 /* SceneDelegate.swift in Sources */,
 				907FE3CD2897C5CF00111991 /* ComicDataContainer.swift in Sources */,
 				90D7BE502898FD07000D063A /* HomePageViewModelEvents.swift in Sources */,
@@ -475,7 +497,9 @@
 				907AC7AA289BE86D0002CE3F /* TableConstants.swift in Sources */,
 				907FE3C32897C31400111991 /* Url.swift in Sources */,
 				90D7BE5228993AEB000D063A /* ListCard.swift in Sources */,
+				907872CF28A11EB800189661 /* SearchPageConstants.swift in Sources */,
 				907FE3CF2897C63700111991 /* ComicDataWrapper.swift in Sources */,
+				907872C928A0EB2B00189661 /* SearchPageViewModelEvents.swift in Sources */,
 				90EE3C66289CEBBB00897870 /* AlamofireProtocol.swift in Sources */,
 				907FE3D42897D26000111991 /* ApiClient.swift in Sources */,
 				907FE3DF28980A0F00111991 /* HomePageView.swift in Sources */,
