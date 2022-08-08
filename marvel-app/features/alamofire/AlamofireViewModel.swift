@@ -13,7 +13,7 @@ class AlamofireViewModel: ObservableObject{
     @Published var comics: ComicDataWrapper?
 
     var alamofireProtocol: AlamofireProtocol
-    private var cancellables: Set<AnyCancellable> = []
+    private var cancellables = Set<AnyCancellable>()
 
     init(alamofireProtocol: AlamofireProtocol = AlamofireClient.shared) {
         self.alamofireProtocol = alamofireProtocol

@@ -15,7 +15,7 @@ class HomePageViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel.delegate = self
-        self.navigationItem.title = "Marvel Comics"
+        self.navigationItem.title = HomePageConstants.homePageTitle
         configureUI()
         
         Task{
@@ -26,7 +26,7 @@ class HomePageViewController: UITableViewController{
     private func configureUI(){
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
-        tableView.register(ListCard.self, forCellReuseIdentifier: "ComicsCell")
+        tableView.register(ListCard.self, forCellReuseIdentifier: "\(HomePageConstants.cellId)")
         tableView.separatorStyle = .none        
     }
     
@@ -35,19 +35,19 @@ class HomePageViewController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ComicsCell", for: indexPath) as? ListCard else {
-            fatalError("ListCard is not defined")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(HomePageConstants.cellId)", for: indexPath) as? ListCard else {
+            fatalError("\(HomePageConstants.cellError)")
         }
         
         cell.tag = indexPath.row
         
         let comicBook = comics?.data?.results?[indexPath.row]
         
-        cell.titleLabel.text = getComicTitle(comic: comicBook)
-        cell.authorLabel.text = getAuthor(comic: comicBook)
-        cell.descriptionLabel.text = getDescription(comic: comicBook)
+        cell.titleLabel.text = comicBook?.getComicTitle(comic: comicBook)
+        cell.authorLabel.text = comicBook?.getAuthor(comic: comicBook)
+        cell.descriptionLabel.text = comicBook?.getDescription(comic: comicBook)
         
-        cell.coverImageView.loadFrom(url: getCoverUrl(comic: comicBook))
+        cell.coverImageView.loadFrom(url: (comicBook?.getCoverUrl(comic: comicBook))! as URL)
         
         return cell
     }
@@ -58,47 +58,6 @@ class HomePageViewController: UITableViewController{
         await viewModel.fetchComics()
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
-        }
-    }
-    
-    private func getComicTitle(comic: Comic?) -> String{
-        if let comic = comic, let title = comic.title{
-            return title
-        } else{
-            return "Title unknown."
-        }
-    }
-    
-    private func getAuthor(comic: Comic?) -> String{
-        if let comic = comic, let creators = comic.creators, let items = creators.items, !items.isEmpty{
-            for author in items {
-                if (author.role == "writer"){
-                    return "Written by \(author.name ?? "???")."
-                }
-            }
-            return "Created by \(items[0].name ?? "???")."
-        } else{
-            return "Author unknown."
-        }
-    }
-    
-    private func getDescription(comic: Comic?) -> String{
-        if let comic = comic, let description = comic.description, !description.isEmpty{
-            return description
-        } else{
-            return "No description was given."
-        }
-    }
-    
-    private func getCoverUrl(comic: Comic?) -> URL{
-        guard let defaultUrl = URL(string: "https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg")else {
-            return URL(string:"")!
-        }
-        
-        if let comic = comic, let thumbnail = comic.thumbnail, let path = thumbnail.path, let ext = thumbnail.extension {
-            return URL(string: "\(path).\(ext)".replacingOccurrences(of: "http", with: "https")) ?? defaultUrl
-        } else {
-            return defaultUrl
         }
     }
 }

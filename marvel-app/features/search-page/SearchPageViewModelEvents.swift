@@ -9,5 +9,4 @@ import Foundation
 
 protocol SearchPageViewModelEvents: AnyObject {
     func comicsFetched(comics: ComicDataWrapper)
-    func nothingFound(notFound: Bool)
 }

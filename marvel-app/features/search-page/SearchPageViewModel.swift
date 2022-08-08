@@ -17,11 +17,6 @@ class SearchPageViewModel {
         do{
             let comics = try await repo.searchComics(searchText: searchText)
             self.delegate?.comicsFetched(comics: comics)
-            if let data = comics.data, let results = data.results{
-                self.delegate?.nothingFound(notFound: results.isEmpty)
-            } else{
-                self.delegate?.nothingFound(notFound: true)
-            }
         } catch {
             print("Error fetching comics from viewmodel")
         }
