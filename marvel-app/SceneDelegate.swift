@@ -28,7 +28,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             homePageVC.tabBarItem.image = UIImage(systemName: "house.fill")
             searchPageVC.tabBarItem.title = nil
             searchPageVC.tabBarItem.image = UIImage(systemName: "magnifyingglass")
-            window?.rootViewController = UINavigationController(rootViewController: tabBarController)
+            window?.rootViewController = tabBarController
+
             window?.makeKeyAndVisible()
     }
 

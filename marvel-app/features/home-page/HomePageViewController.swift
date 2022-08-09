@@ -15,7 +15,7 @@ class HomePageViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel.delegate = self
-        self.navigationItem.title = HomePageConstants.homePageTitle
+        
         configureUI()
         
         Task{
@@ -25,6 +25,8 @@ class HomePageViewController: UITableViewController{
     
     private func configureUI(){
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.title = HomePageConstants.homePageTitle
+        self.navigationItem.backButtonDisplayMode = .minimal
         
         tableView.register(ListCard.self, forCellReuseIdentifier: "\(HomePageConstants.cellId)")
         tableView.separatorStyle = .none        
@@ -52,7 +54,9 @@ class HomePageViewController: UITableViewController{
         return cell
     }
     
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(DetailsViewController(comic: comics?.data?.results?[indexPath.row]), animated: true)
+    }
     
     private func fetchComics() async {
         await viewModel.fetchComics()

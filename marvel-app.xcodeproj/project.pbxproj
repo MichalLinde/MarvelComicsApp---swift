@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		905D8EDF28A237540055238D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D8EDE28A237540055238D /* DetailsViewController.swift */; };
+		905D8EE128A284840055238D /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D8EE028A284840055238D /* BottomSheet.swift */; };
+		905D8EE328A2D5810055238D /* DetailsPageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D8EE228A2D5810055238D /* DetailsPageConstants.swift */; };
 		907872C928A0EB2B00189661 /* SearchPageViewModelEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907872C828A0EB2B00189661 /* SearchPageViewModelEvents.swift */; };
 		907872CB28A0EB8F00189661 /* SearchPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907872CA28A0EB8F00189661 /* SearchPageViewModel.swift */; };
 		907872CF28A11EB800189661 /* SearchPageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907872CE28A11EB800189661 /* SearchPageConstants.swift */; };
@@ -65,6 +68,9 @@
 
 /* Begin PBXFileReference section */
 		4F3BFB6551B802F8021298C9 /* Pods-marvel-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel-app.release.xcconfig"; path = "Target Support Files/Pods-marvel-app/Pods-marvel-app.release.xcconfig"; sourceTree = "<group>"; };
+		905D8EDE28A237540055238D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		905D8EE028A284840055238D /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+		905D8EE228A2D5810055238D /* DetailsPageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPageConstants.swift; sourceTree = "<group>"; };
 		907872C828A0EB2B00189661 /* SearchPageViewModelEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewModelEvents.swift; sourceTree = "<group>"; };
 		907872CA28A0EB8F00189661 /* SearchPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewModel.swift; sourceTree = "<group>"; };
 		907872CE28A11EB800189661 /* SearchPageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageConstants.swift; sourceTree = "<group>"; };
@@ -135,12 +141,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		905D8EDD28A237410055238D /* details-page */ = {
+			isa = PBXGroup;
+			children = (
+				905D8EDE28A237540055238D /* DetailsViewController.swift */,
+				905D8EE028A284840055238D /* BottomSheet.swift */,
+			);
+			path = "details-page";
+			sourceTree = "<group>";
+		};
 		907AC7A8289BE8460002CE3F /* constants */ = {
 			isa = PBXGroup;
 			children = (
 				907AC7A9289BE86D0002CE3F /* TableConstants.swift */,
 				907872CE28A11EB800189661 /* SearchPageConstants.swift */,
 				907872D028A1369500189661 /* HomePageConstants.swift */,
+				905D8EE228A2D5810055238D /* DetailsPageConstants.swift */,
 			);
 			path = constants;
 			sourceTree = "<group>";
@@ -253,6 +269,7 @@
 		907FE3D82897F3B700111991 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				905D8EDD28A237410055238D /* details-page */,
 				90EE3C70289D476900897870 /* search-page */,
 				90EE3C69289CF01200897870 /* alamofire */,
 				907FE3D92897F3C900111991 /* home-page */,
@@ -499,6 +516,7 @@
 				907FE38E2897BE2200111991 /* AppDelegate.swift in Sources */,
 				907FE3E528980AAE00111991 /* UIViewExtension.swift in Sources */,
 				90EE3C72289D478300897870 /* SearchPageViewController.swift in Sources */,
+				905D8EE128A284840055238D /* BottomSheet.swift in Sources */,
 				907FE3902897BE2200111991 /* SceneDelegate.swift in Sources */,
 				907FE3CD2897C5CF00111991 /* ComicDataContainer.swift in Sources */,
 				90D7BE502898FD07000D063A /* HomePageViewModelEvents.swift in Sources */,
@@ -513,10 +531,12 @@
 				907872D428A139F300189661 /* InitialScreenView.swift in Sources */,
 				907872C928A0EB2B00189661 /* SearchPageViewModelEvents.swift in Sources */,
 				90EE3C66289CEBBB00897870 /* AlamofireProtocol.swift in Sources */,
+				905D8EDF28A237540055238D /* DetailsViewController.swift in Sources */,
 				907FE3D42897D26000111991 /* ApiClient.swift in Sources */,
 				907FE3DF28980A0F00111991 /* HomePageView.swift in Sources */,
 				907FE3DD2897F4BA00111991 /* HomePageViewModel.swift in Sources */,
 				90EE3C6B289CF03B00897870 /* AlamofireViewModel.swift in Sources */,
+				905D8EE328A2D5810055238D /* DetailsPageConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

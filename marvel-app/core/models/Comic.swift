@@ -39,7 +39,7 @@ extension Comic{
     
     func getDescription(comic: Comic?) -> String{
         if let comic = comic, let description = comic.description, !description.isEmpty{
-            return description
+            return description.withoutHtml
         } else{
             return SearchPageConstants.noDescription
         }
@@ -55,5 +55,24 @@ extension Comic{
         } else {
             return defaultUrl
         }
+    }
+}
+
+extension String {
+    public var withoutHtml: String {
+        guard let data = self.data(using: .utf8) else {
+            return self
+        }
+
+        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
+            .documentType: NSAttributedString.DocumentType.html,
+            .characterEncoding: String.Encoding.utf8.rawValue
+        ]
+
+        guard let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil) else {
+            return self
+        }
+
+        return attributedString.string
     }
 }
