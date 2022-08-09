@@ -23,4 +23,14 @@ class ComicsRepository{
             throw FetchingError.failedFetching(message: "Failed in Repo")
         }
     }
+    
+    func searchComics(searchText: String) async throws -> ComicDataWrapper{
+        do {
+            let data = try await apiClient.searchComics(searchText: searchText)
+            let comicDataWrapper = try JSONDecoder().decode(ComicDataWrapper.self, from: data)
+            return comicDataWrapper
+        } catch {
+            throw FetchingError.failedFetching(message: "Failed in repo")
+        }
+    }
 }
