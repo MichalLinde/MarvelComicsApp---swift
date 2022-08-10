@@ -7,10 +7,11 @@
 
 import UIKit
 
-class HomePageViewController: UITableViewController{
+class HomePageViewController: UIViewController{
     
     var viewModel = HomePageViewModel()
     var comics: ComicDataWrapper?
+    var indicator = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,7 @@ class HomePageViewController: UITableViewController{
         configureUI()
         
         Task{
+            self.startIndicator(indicator:indicator)
             await fetchComics()
         }
     }
@@ -28,15 +30,47 @@ class HomePageViewController: UITableViewController{
         self.navigationItem.title = HomePageConstants.homePageTitle
         self.navigationItem.backButtonDisplayMode = .minimal
         
+        view.backgroundColor = .white
+        
+        view.addSubview(tableView)
+        tableView.anchor(top: view.safeTopAnchor,
+                         left: view.leftAnchor,
+                         bottom: view.safeBottomAnchor,
+                         right: view.rightAnchor)
+        tableView.dataSource = self
         tableView.register(ListCard.self, forCellReuseIdentifier: "\(HomePageConstants.cellId)")
-        tableView.separatorStyle = .none        
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    private lazy var tableView: UITableView = {
+        let table = UITableView()
+        table.delegate = self
+        table.translatesAutoresizingMaskIntoConstraints = false
+        table.separatorStyle = .none
+        return table
+    }()
+    
+    private func fetchComics() async {
+        await viewModel.fetchComics()
+        DispatchQueue.main.async {
+            self.stopIndicator(indicator: self.indicator)
+            self.tableView.reloadData()
+        }
+    }
+}
+
+extension HomePageViewController: HomePageViewModelEvents{
+    func comicsFetched(comics: ComicDataWrapper) {
+        self.comics = comics
+    }
+}
+
+extension HomePageViewController: UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         comics?.data?.results?.count ?? 0
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(HomePageConstants.cellId)", for: indexPath) as? ListCard else {
             fatalError("\(HomePageConstants.cellError)")
         }
@@ -53,22 +87,11 @@ class HomePageViewController: UITableViewController{
         
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(DetailsViewController(comic: comics?.data?.results?[indexPath.row]), animated: true)
-    }
-    
-    private func fetchComics() async {
-        await viewModel.fetchComics()
-        DispatchQueue.main.async { [weak self] in
-            self?.tableView.reloadData()
-        }
-    }
 }
 
-extension HomePageViewController: HomePageViewModelEvents{
-    func comicsFetched(comics: ComicDataWrapper) {
-        self.comics = comics
+extension HomePageViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(DetailsViewController(comic: comics?.data?.results?[indexPath.row]), animated: true)
     }
 }
 

@@ -14,6 +14,7 @@ class SearchPageViewController: UIViewController{
     var comics: ComicDataWrapper?
     
     var debouncer: Timer?
+    var indicator = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,8 +83,9 @@ class SearchPageViewController: UIViewController{
     
     func searchComics(searchText: String) async {
         await viewModel.searchComics(searchText: searchText)
-        DispatchQueue.main.async { [weak self] in
-            self?.tableView.reloadData()
+        DispatchQueue.main.async {
+            self.stopIndicator(indicator: self.indicator)
+            self.tableView.reloadData()
         }
     }
 }
@@ -138,6 +140,7 @@ extension SearchPageViewController: UISearchBarDelegate {
         
         debouncer?.invalidate()
         debouncer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false){ _ in
+            self.startIndicator(indicator: self.indicator)
             self.fetchComicsOnChange(searchText: searchText)
         }
     }
@@ -167,6 +170,7 @@ extension SearchPageViewController: UISearchBarDelegate {
                 }
             }
         } else {
+            stopIndicator(indicator: indicator)
             initialScreen.isHidden = false
             notFoundView.isHidden = true
             tableView.isHidden = true
