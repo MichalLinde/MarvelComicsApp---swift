@@ -9,7 +9,12 @@ import Foundation
 
 class HomePageViewModel{
     
-    let repo = ComicsRepository()
+    let repo: ComicsRepositoryProtocol
+    
+    init(repo: ComicsRepositoryProtocol) {
+        self.repo = repo
+    }
+    
     weak var delegate: HomePageViewModelEvents?
     
     func fetchComics() async {

@@ -7,9 +7,14 @@
 
 import Foundation
 
-class SearchPageViewModel {
+class SearchPageViewModel{
     
-    let repo = ComicsRepository()
+    let repo: ComicsRepositoryProtocol
+    
+    init(repo: ComicsRepositoryProtocol){
+        self.repo = repo
+    }
+    
     var notFound = true
     weak var delegate: SearchPageViewModelEvents?
     

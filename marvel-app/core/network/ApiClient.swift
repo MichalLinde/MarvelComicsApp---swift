@@ -8,7 +8,7 @@
 import Foundation
 import CryptoKit
 
-class ApiClient {
+class ApiClient: ApiClientProtocol {
     
     func fetchComics() async throws -> Data {
                 
