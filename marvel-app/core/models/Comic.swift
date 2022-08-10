@@ -20,7 +20,7 @@ extension Comic{
         if let comic = comic, let title = comic.title{
             return title
         } else{
-            return SearchPageConstants.noTitle
+            return SearchPageConstants.noTitle.localize()
         }
     }
     
@@ -28,12 +28,12 @@ extension Comic{
         if let comic = comic, let creators = comic.creators, let items = creators.items, !items.isEmpty{
             for author in items {
                 if (author.role == "writer"){
-                    return "\(SearchPageConstants.writtenBy) \(author.name ?? "???")."
+                    return "\(SearchPageConstants.writtenBy.localize()) \(author.name ?? "???")."
                 }
             }
-            return "\(SearchPageConstants.createdBy) \(items[0].name ?? "???")."
+            return "\(SearchPageConstants.createdBy.localize()) \(items[0].name ?? "???")."
         } else{
-            return SearchPageConstants.noAuthor
+            return SearchPageConstants.noAuthor.localize()
         }
     }
     
@@ -41,7 +41,7 @@ extension Comic{
         if let comic = comic, let description = comic.description, !description.isEmpty{
             return description.withoutHtml
         } else{
-            return SearchPageConstants.noDescription
+            return SearchPageConstants.noDescription.localize()
         }
     }
     

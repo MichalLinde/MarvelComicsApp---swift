@@ -36,9 +36,11 @@ class InitialScreenView: UIView{
     
     private lazy var initialText: UILabel = {
         let label = UILabel()
-        label.text = SearchPageConstants.initialText
+        label.text = SearchPageConstants.initialText.localize()
         label.font = .systemFont(ofSize: SearchPageConstants.initialTextSize, weight: .bold)
         label.textColor = .black
+        label.numberOfLines = .zero
+        label.lineBreakMode = .byWordWrapping
         label.textAlignment = .center
         return label
     }()
