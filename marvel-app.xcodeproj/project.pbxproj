@@ -40,6 +40,7 @@
 		907FE3E528980AAE00111991 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FE3E328980AAE00111991 /* UIViewExtension.swift */; };
 		908357A9289BFD970061056E /* AlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908357A8289BFD970061056E /* AlamofireClient.swift */; };
 		90C9424A28A13F0000C35850 /* NothingFoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C9424928A13F0000C35850 /* NothingFoundView.swift */; };
+		90D34F8228A394AF00BEE61F /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D34F8128A394AF00BEE61F /* UIViewControllerExtension.swift */; };
 		90D7BE502898FD07000D063A /* HomePageViewModelEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7BE4F2898FD07000D063A /* HomePageViewModelEvents.swift */; };
 		90D7BE5228993AEB000D063A /* ListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7BE5128993AEB000D063A /* ListCard.swift */; };
 		90EE3C66289CEBBB00897870 /* AlamofireProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE3C65289CEBBB00897870 /* AlamofireProtocol.swift */; };
@@ -105,6 +106,7 @@
 		907FE3E328980AAE00111991 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = "../../../../Desktop/Swift Utils/UIViewExtension.swift"; sourceTree = "<group>"; };
 		908357A8289BFD970061056E /* AlamofireClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireClient.swift; sourceTree = "<group>"; };
 		90C9424928A13F0000C35850 /* NothingFoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NothingFoundView.swift; sourceTree = "<group>"; };
+		90D34F8128A394AF00BEE61F /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		90D7BE4F2898FD07000D063A /* HomePageViewModelEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModelEvents.swift; sourceTree = "<group>"; };
 		90D7BE5128993AEB000D063A /* ListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCard.swift; sourceTree = "<group>"; };
 		90EE3C65289CEBBB00897870 /* AlamofireProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireProtocol.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				907FE3E228980AAE00111991 /* UIStackViewExtension.swift */,
 				907FE3E328980AAE00111991 /* UIViewExtension.swift */,
 				907FE3D12897CBB700111991 /* ApiConstants.swift */,
+				90D34F8128A394AF00BEE61F /* UIViewControllerExtension.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				907FE3922897BE2200111991 /* HomePageViewController.swift in Sources */,
 				907FE38E2897BE2200111991 /* AppDelegate.swift in Sources */,
 				907FE3E528980AAE00111991 /* UIViewExtension.swift in Sources */,
+				90D34F8228A394AF00BEE61F /* UIViewControllerExtension.swift in Sources */,
 				90EE3C72289D478300897870 /* SearchPageViewController.swift in Sources */,
 				905D8EE128A284840055238D /* BottomSheet.swift in Sources */,
 				907FE3902897BE2200111991 /* SceneDelegate.swift in Sources */,
