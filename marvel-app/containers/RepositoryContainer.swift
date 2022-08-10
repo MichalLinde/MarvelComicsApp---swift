@@ -22,8 +22,8 @@ class RepositoryContainer {
             return ApiClient()
         }.inObjectScope(.container)
         
-        container.register(ComicsRepositoryProtocol.self) { r in
-            return ComicsRepository(apiClient: r.resolve(ApiClientProtocol.self)!)
+        container.register(ComicsRepositoryProtocol.self) { resolver in
+            return ComicsRepository(apiClient: resolver.resolve(ApiClientProtocol.self)!)
         }.inObjectScope(.container)
     }
 }
