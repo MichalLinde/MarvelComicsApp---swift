@@ -34,7 +34,7 @@ class BottomSheet: UIViewController {
         titleLabel.anchor(top: view.topAnchor,
                           left: view.leftAnchor,
                           right: view.rightAnchor,
-                          paddingTop: 30,
+                          paddingTop: DetailsPageConstants.sheetTextTopPadding,
                           paddingLeft: DetailsPageConstants.sheetLabelsPadding,
                           paddingRight: DetailsPageConstants.sheetLabelsPadding)
         

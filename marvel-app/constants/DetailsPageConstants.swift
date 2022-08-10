@@ -22,4 +22,5 @@ struct DetailsPageConstants {
     static let authorsFontSize: CGFloat = 14.0
     static let descriptionFontSize: CGFloat = 16.0
     static let noAuthor = "Author unknown."
+    static let sheetTextTopPadding: CGFloat = 30.0
 }
