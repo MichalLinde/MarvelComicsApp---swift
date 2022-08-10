@@ -7,9 +7,13 @@
 
 import Foundation
 
-class ComicsRepository{
+class ComicsRepository: ComicsRepositoryProtocol{
     
-    let apiClient = ApiClient()
+    var apiClient: ApiClientProtocol
+    
+    init(apiClient: ApiClientProtocol){
+        self.apiClient = apiClient
+    }
     
     func fetchComic() async throws -> ComicDataWrapper{
         

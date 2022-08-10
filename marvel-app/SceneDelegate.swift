@@ -18,8 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let winScene = (scene as? UIWindowScene) else { return }
             window = UIWindow(windowScene: winScene)
-            let homePageVC = UINavigationController(rootViewController: HomePageViewController())
-            let searchPageVC = UINavigationController(rootViewController: SearchPageViewController())
+            let viewControllersContainer = ViewControllersContainer.sharedContainer.container
+            let homePageVC = UINavigationController(rootViewController: viewControllersContainer.resolve(HomePageViewController.self)!)
+            let searchPageVC = UINavigationController(rootViewController: viewControllersContainer.resolve(SearchPageViewController.self)!)
             let tabBarController = UITabBarController()
             UITabBar.appearance().unselectedItemTintColor = .gray
             UITabBar.appearance().tintColor = .red

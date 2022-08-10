@@ -10,7 +10,17 @@ import UIKit
 
 class SearchPageViewController: UIViewController{
     
-    private var viewModel = SearchPageViewModel()
+    var viewModel: SearchPageViewModel
+    
+    init(viewModel: SearchPageViewModel){
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     var comics: ComicDataWrapper?
     
     var debouncer: Timer?

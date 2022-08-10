@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9031E41228A3D6A900ECFA58 /* ViewModelsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9031E41128A3D6A900ECFA58 /* ViewModelsContainer.swift */; };
+		9031E41428A3D87200ECFA58 /* RepositoryContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9031E41328A3D87200ECFA58 /* RepositoryContainer.swift */; };
+		9031E41628A3D8CC00ECFA58 /* ApiClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9031E41528A3D8CC00ECFA58 /* ApiClientProtocol.swift */; };
+		9031E41828A3DA0800ECFA58 /* ComicsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9031E41728A3DA0800ECFA58 /* ComicsRepositoryProtocol.swift */; };
+		9031E41E28A3E0FF00ECFA58 /* ViewControllersContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9031E41D28A3E0FF00ECFA58 /* ViewControllersContainer.swift */; };
 		905D8EDF28A237540055238D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D8EDE28A237540055238D /* DetailsViewController.swift */; };
 		905D8EE128A284840055238D /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D8EE028A284840055238D /* BottomSheet.swift */; };
 		905D8EE328A2D5810055238D /* DetailsPageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D8EE228A2D5810055238D /* DetailsPageConstants.swift */; };
@@ -69,6 +74,11 @@
 
 /* Begin PBXFileReference section */
 		4F3BFB6551B802F8021298C9 /* Pods-marvel-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel-app.release.xcconfig"; path = "Target Support Files/Pods-marvel-app/Pods-marvel-app.release.xcconfig"; sourceTree = "<group>"; };
+		9031E41128A3D6A900ECFA58 /* ViewModelsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelsContainer.swift; sourceTree = "<group>"; };
+		9031E41328A3D87200ECFA58 /* RepositoryContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryContainer.swift; sourceTree = "<group>"; };
+		9031E41528A3D8CC00ECFA58 /* ApiClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientProtocol.swift; sourceTree = "<group>"; };
+		9031E41728A3DA0800ECFA58 /* ComicsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsRepositoryProtocol.swift; sourceTree = "<group>"; };
+		9031E41D28A3E0FF00ECFA58 /* ViewControllersContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersContainer.swift; sourceTree = "<group>"; };
 		905D8EDE28A237540055238D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		905D8EE028A284840055238D /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		905D8EE228A2D5810055238D /* DetailsPageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPageConstants.swift; sourceTree = "<group>"; };
@@ -143,6 +153,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9031E41028A3D68300ECFA58 /* containers */ = {
+			isa = PBXGroup;
+			children = (
+				9031E41128A3D6A900ECFA58 /* ViewModelsContainer.swift */,
+				9031E41328A3D87200ECFA58 /* RepositoryContainer.swift */,
+				9031E41D28A3E0FF00ECFA58 /* ViewControllersContainer.swift */,
+			);
+			path = containers;
+			sourceTree = "<group>";
+		};
 		905D8EDD28A237410055238D /* details-page */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +208,7 @@
 		907FE38C2897BE2200111991 /* marvel-app */ = {
 			isa = PBXGroup;
 			children = (
+				9031E41028A3D68300ECFA58 /* containers */,
 				907AC7A8289BE8460002CE3F /* constants */,
 				907FE3D82897F3B700111991 /* features */,
 				907FE3D02897CBA400111991 /* utils */,
@@ -246,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				907FE3D32897D26000111991 /* ApiClient.swift */,
+				9031E41528A3D8CC00ECFA58 /* ApiClientProtocol.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -265,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				907FE3D62897E9AF00111991 /* ComicsRepository.swift */,
+				9031E41728A3DA0800ECFA58 /* ComicsRepositoryProtocol.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -508,6 +531,8 @@
 			files = (
 				907FE3D22897CBB700111991 /* ApiConstants.swift in Sources */,
 				907872CB28A0EB8F00189661 /* SearchPageViewModel.swift in Sources */,
+				9031E41428A3D87200ECFA58 /* RepositoryContainer.swift in Sources */,
+				9031E41228A3D6A900ECFA58 /* ViewModelsContainer.swift in Sources */,
 				908357A9289BFD970061056E /* AlamofireClient.swift in Sources */,
 				907FE3E428980AAE00111991 /* UIStackViewExtension.swift in Sources */,
 				907FE3D72897E9AF00111991 /* ComicsRepository.swift in Sources */,
@@ -533,12 +558,15 @@
 				907872CF28A11EB800189661 /* SearchPageConstants.swift in Sources */,
 				907FE3CF2897C63700111991 /* ComicDataWrapper.swift in Sources */,
 				907872D428A139F300189661 /* InitialScreenView.swift in Sources */,
+				9031E41828A3DA0800ECFA58 /* ComicsRepositoryProtocol.swift in Sources */,
 				907872C928A0EB2B00189661 /* SearchPageViewModelEvents.swift in Sources */,
 				90EE3C66289CEBBB00897870 /* AlamofireProtocol.swift in Sources */,
 				905D8EDF28A237540055238D /* DetailsViewController.swift in Sources */,
 				907FE3D42897D26000111991 /* ApiClient.swift in Sources */,
 				907FE3DF28980A0F00111991 /* HomePageView.swift in Sources */,
 				907FE3DD2897F4BA00111991 /* HomePageViewModel.swift in Sources */,
+				9031E41628A3D8CC00ECFA58 /* ApiClientProtocol.swift in Sources */,
+				9031E41E28A3E0FF00ECFA58 /* ViewControllersContainer.swift in Sources */,
 				90EE3C6B289CF03B00897870 /* AlamofireViewModel.swift in Sources */,
 				905D8EE328A2D5810055238D /* DetailsPageConstants.swift in Sources */,
 			);
