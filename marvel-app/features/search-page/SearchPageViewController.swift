@@ -25,6 +25,7 @@ class SearchPageViewController: UIViewController{
         
         view.backgroundColor = .white
         navigationController?.navigationBar.prefersLargeTitles = false
+        self.navigationItem.backButtonDisplayMode = .minimal
                 
         navigationItem.titleView = searchBar
                 
@@ -69,6 +70,7 @@ class SearchPageViewController: UIViewController{
     
     private lazy var tableView: UITableView = {
         let table = UITableView()
+        table.delegate = self
         table.translatesAutoresizingMaskIntoConstraints = false
         table.separatorStyle = .none
         table.isHidden = true
@@ -121,6 +123,13 @@ extension SearchPageViewController: UITableViewDataSource{
         return cell
     }
 }
+
+extension SearchPageViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(DetailsViewController(comic: comics?.data?.results?[indexPath.row]), animated: true)
+    }
+}
+
 
 extension SearchPageViewController: UISearchBarDelegate {
     

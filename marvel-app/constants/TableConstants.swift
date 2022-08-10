@@ -13,7 +13,7 @@ struct TableConstants {
     static let tableItemPadding: CGFloat = 10
     static let betweenTextPadding: CGFloat = 5
     static let imageHeight: CGFloat = 200
-    static let imageWidth: CGFloat = 130
+    static let imageWidth: CGFloat = 140
     static let cornerRadius: CGFloat = 10
     static let cardShadowRadius: CGFloat = 6
     static let cardShadowOpacity: Float = 0.7

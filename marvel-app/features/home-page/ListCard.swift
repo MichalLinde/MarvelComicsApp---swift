@@ -49,14 +49,13 @@ class ListCard: UITableViewCell{
                     paddingRight: TableConstants.tableItemPadding,
                     height: TableConstants.tableItemHeight)
         
-        card.addSubviews(coverImageView, titleLabel, authorLabel, descriptionLabel)
+        card.addSubviews(imageContainer, titleLabel, authorLabel, descriptionLabel)
         
-        coverImageView.anchor(top: card.topAnchor,
+        imageContainer.anchor(top: card.topAnchor,
                               left: card.leftAnchor,
                               bottom: card.bottomAnchor,
                               paddingRight: TableConstants.betweenTextPadding,
-                              width: TableConstants.imageWidth,
-                              height: TableConstants.imageHeight)
+                              width: TableConstants.imageWidth)
         
         titleLabel.anchor(top: card.topAnchor,
                           left: coverImageView.rightAnchor,
@@ -64,8 +63,7 @@ class ListCard: UITableViewCell{
                           paddingTop: TableConstants.betweenTextPadding,
                           paddingLeft: TableConstants.betweenTextPadding,
                           paddingBottom: TableConstants.betweenTextPadding,
-                          paddingRight: TableConstants.betweenTextPadding,
-                          width: frame.size.width / 2 )
+                          paddingRight: TableConstants.betweenTextPadding)
         
         authorLabel.anchor(top: titleLabel.bottomAnchor,
                            left: coverImageView.rightAnchor,
@@ -124,12 +122,22 @@ class ListCard: UITableViewCell{
         return label
     }()
     
+    lazy var imageContainer: UIView = {
+        let container = UIView()
+        container.addSubview(coverImageView)
+        coverImageView.anchor(top: container.topAnchor,
+                              left: container.leftAnchor,
+                              bottom: container.bottomAnchor,
+                              right: container.rightAnchor)
+        return container
+    }()
+    
     lazy var coverImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = TableConstants.cornerRadius
         imageView.clipsToBounds = true
         imageView.layer.masksToBounds = true
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleToFill
         return imageView
     }()
     
