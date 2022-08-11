@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-class SearchPageViewController: UIViewController{
+class SearchPageViewController: UIViewController, Coordinating{
+    var coordinator: Coordinator?
     
     var viewModel: SearchPageViewModel
     
@@ -92,11 +93,15 @@ class SearchPageViewController: UIViewController{
     //MARK: Data
     
     func searchComics(searchText: String) async {
-        await viewModel.searchComics(searchText: searchText)
+        await viewModel.searchComics(searchText: prepareTextForSearch(searchText: searchText))
         DispatchQueue.main.async {
             self.stopIndicator(indicator: self.indicator)
             self.tableView.reloadData()
         }
+    }
+    
+    private func prepareTextForSearch(searchText: String) -> String {
+        return searchText.replacingOccurrences(of: " ", with: "%20")
     }
 }
 
@@ -138,7 +143,7 @@ extension SearchPageViewController: UITableViewDataSource{
 
 extension SearchPageViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(DetailsViewController(comic: comics?.data?.results?[indexPath.row]), animated: true)
+        self.coordinator?.eventOccured(with: .listElementClicked(comic: comics?.data?.results?[indexPath.row]))
     }
 }
 

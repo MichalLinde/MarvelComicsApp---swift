@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-class DetailsViewController: UIViewController {
+class DetailsViewController: UIViewController, Coordinating {
+    var coordinator: Coordinator?
     
     var comic: Comic?
     var bottomSheet: BottomSheet?
