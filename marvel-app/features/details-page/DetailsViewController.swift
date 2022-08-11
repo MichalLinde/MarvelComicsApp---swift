@@ -25,7 +25,7 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad(){
         super.viewDidLoad()
         self.navigationItem.largeTitleDisplayMode = .never
-        self.navigationItem.title = DetailsPageConstants.detailsPageTitle
+        self.navigationItem.title = DetailsPageConstants.detailsPageTitle.localize()
         setupUI()
     }
     

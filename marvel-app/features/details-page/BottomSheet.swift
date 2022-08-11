@@ -60,7 +60,7 @@ class BottomSheet: UIViewController {
                           paddingRight: DetailsPageConstants.moreButtonHorizontalPadding,
                           height: DetailsPageConstants.moreButtonHeight
                           )
-        moreButton.setTitle(DetailsPageConstants.moreButtonText, for: .normal)
+        moreButton.setTitle(DetailsPageConstants.moreButtonText.localize(), for: .normal)
         
     }
     

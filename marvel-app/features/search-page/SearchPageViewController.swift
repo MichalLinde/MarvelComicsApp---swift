@@ -64,7 +64,7 @@ class SearchPageViewController: UIViewController{
     
     private lazy var searchBar: UISearchBar = {
         let bar = UISearchBar()
-        bar.placeholder = SearchPageConstants.searchBarHint
+        bar.placeholder = SearchPageConstants.searchBarHint.localize()
         bar.delegate = self
         bar.sizeToFit()
         bar.searchTextField.clearButtonMode = .never
@@ -174,7 +174,7 @@ extension SearchPageViewController: UISearchBarDelegate {
                     tableView.isHidden = false
                 } else{
                     initialScreen.isHidden = true
-                    notFoundView.notFoundText.text = "\(SearchPageConstants.notFoundText1) \(searchText) \(SearchPageConstants.notFoundText2)"
+                    notFoundView.notFoundText.text = "\(SearchPageConstants.notFoundText1.localize()) \(searchText) \(SearchPageConstants.notFoundText2.localize())"
                     notFoundView.isHidden = false
                     tableView.isHidden = true
                 }
