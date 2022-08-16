@@ -10,13 +10,11 @@ import UIKit
 
 class HomePageCoordinator: Coordinator {
     var navigationController: UINavigationController?
-    var homePageVC: HomePageViewController
     let vcContainer: ViewControllersContainer
     
     init(vcContainer: ViewControllersContainer, navigationController: UINavigationController){
         self.vcContainer = vcContainer
         self.navigationController = navigationController
-        self.homePageVC = vcContainer.container.resolve(HomePageViewController.self)!
     }
     
     func eventOccured(with type: Event) {
@@ -31,6 +29,7 @@ class HomePageCoordinator: Coordinator {
     }
     
     func start() -> UINavigationController{
+        let homePageVC = vcContainer.container.resolve(HomePageViewController.self)!
         homePageVC.coordinator = self
         navigationController?.setViewControllers([homePageVC], animated: true)
         return navigationController!

@@ -10,13 +10,11 @@ import UIKit
 
 class SearchPageCoordinator: Coordinator{
     var navigationController: UINavigationController?
-    var searchPageVC: SearchPageViewController
     let vcContainer: ViewControllersContainer
     
     init(vcContainer: ViewControllersContainer, navigationController: UINavigationController){
         self.vcContainer = vcContainer
         self.navigationController = navigationController
-        searchPageVC = vcContainer.container.resolve(SearchPageViewController.self)!
     }
     
     func eventOccured(with type: Event) {
@@ -29,6 +27,7 @@ class SearchPageCoordinator: Coordinator{
     }
     
     func start() -> UINavigationController{
+        let searchPageVC = vcContainer.container.resolve(SearchPageViewController.self)!
         searchPageVC.coordinator = self
         navigationController?.setViewControllers([searchPageVC], animated: true)
         return navigationController!
