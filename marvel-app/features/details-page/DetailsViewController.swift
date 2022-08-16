@@ -8,14 +8,14 @@
 import Foundation
 import UIKit
 
-class DetailsViewController: UIViewController {
+class DetailsViewController: UIViewController, Coordinating {
+    var coordinator: Coordinator?
     
     var comic: Comic?
     var bottomSheet: BottomSheet?
     
-    required init(comic: Comic?){
+    required init(){
         super.init(nibName: nil, bundle: nil)
-        self.comic = comic
     }
     
     required init?(coder: NSCoder) {

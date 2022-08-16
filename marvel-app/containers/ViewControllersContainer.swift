@@ -27,5 +27,9 @@ class ViewControllersContainer{
         container.register(SearchPageViewController.self) {_ in
             return SearchPageViewController(viewModel: viewModelsContainer.resolve(SearchPageViewModel.self)!)
         }
+        
+        container.register(DetailsViewController.self) { _ in
+            return DetailsViewController()
+        }
     }
 }

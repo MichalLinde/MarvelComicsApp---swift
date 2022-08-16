@@ -7,7 +7,9 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController{
+class HomePageViewController: UIViewController, Coordinating{
+    
+    var coordinator: Coordinator?
     
     var viewModel: HomePageViewModel
     
@@ -101,7 +103,7 @@ extension HomePageViewController: UITableViewDataSource{
 
 extension HomePageViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(DetailsViewController(comic: comics?.data?.results?[indexPath.row]), animated: true)
+        self.coordinator?.eventOccured(with: .listElementClicked(comic: comics?.data?.results?[indexPath.row]))
     }
 }
 

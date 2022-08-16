@@ -46,6 +46,11 @@
 		907FE3E428980AAE00111991 /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FE3E228980AAE00111991 /* UIStackViewExtension.swift */; };
 		907FE3E528980AAE00111991 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FE3E328980AAE00111991 /* UIViewExtension.swift */; };
 		908357A9289BFD970061056E /* AlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908357A8289BFD970061056E /* AlamofireClient.swift */; };
+		9086B11328A4E4060096477E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086B11228A4E4060096477E /* Coordinator.swift */; };
+		9086B11728A5053C0096477E /* HomePageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086B11628A5053C0096477E /* HomePageCoordinator.swift */; };
+		9086B11928A50D310096477E /* SearchPageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086B11828A50D310096477E /* SearchPageCoordinator.swift */; };
+		9086B11B28A513CE0096477E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086B11A28A513CE0096477E /* AppCoordinator.swift */; };
+		9086B11F28A519600096477E /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086B11E28A519600096477E /* BaseCoordinator.swift */; };
 		90C9424A28A13F0000C35850 /* NothingFoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C9424928A13F0000C35850 /* NothingFoundView.swift */; };
 		90D34F8228A394AF00BEE61F /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D34F8128A394AF00BEE61F /* UIViewControllerExtension.swift */; };
 		90D7BE502898FD07000D063A /* HomePageViewModelEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7BE4F2898FD07000D063A /* HomePageViewModelEvents.swift */; };
@@ -120,6 +125,11 @@
 		907FE3E228980AAE00111991 /* UIStackViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStackViewExtension.swift; path = "../../../../Desktop/Swift Utils/UIStackViewExtension.swift"; sourceTree = "<group>"; };
 		907FE3E328980AAE00111991 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = "../../../../Desktop/Swift Utils/UIViewExtension.swift"; sourceTree = "<group>"; };
 		908357A8289BFD970061056E /* AlamofireClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireClient.swift; sourceTree = "<group>"; };
+		9086B11228A4E4060096477E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9086B11628A5053C0096477E /* HomePageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCoordinator.swift; sourceTree = "<group>"; };
+		9086B11828A50D310096477E /* SearchPageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageCoordinator.swift; sourceTree = "<group>"; };
+		9086B11A28A513CE0096477E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		9086B11E28A519600096477E /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		90C9424928A13F0000C35850 /* NothingFoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NothingFoundView.swift; sourceTree = "<group>"; };
 		90D34F8128A394AF00BEE61F /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		90D7BE4F2898FD07000D063A /* HomePageViewModelEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModelEvents.swift; sourceTree = "<group>"; };
@@ -213,6 +223,7 @@
 		907FE38C2897BE2200111991 /* marvel-app */ = {
 			isa = PBXGroup;
 			children = (
+				9086B11128A4E3F20096477E /* coordinator */,
 				9043B20328A3ECA70091DA9D /* Localizable.strings */,
 				9031E41028A3D68300ECFA58 /* containers */,
 				907AC7A8289BE8460002CE3F /* constants */,
@@ -320,6 +331,18 @@
 				90D7BE5128993AEB000D063A /* ListCard.swift */,
 			);
 			path = "home-page";
+			sourceTree = "<group>";
+		};
+		9086B11128A4E3F20096477E /* coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9086B11228A4E4060096477E /* Coordinator.swift */,
+				9086B11628A5053C0096477E /* HomePageCoordinator.swift */,
+				9086B11828A50D310096477E /* SearchPageCoordinator.swift */,
+				9086B11A28A513CE0096477E /* AppCoordinator.swift */,
+				9086B11E28A519600096477E /* BaseCoordinator.swift */,
+			);
+			path = coordinator;
 			sourceTree = "<group>";
 		};
 		90EE3C69289CF01200897870 /* alamofire */ = {
@@ -544,6 +567,7 @@
 				9031E41228A3D6A900ECFA58 /* ViewModelsContainer.swift in Sources */,
 				908357A9289BFD970061056E /* AlamofireClient.swift in Sources */,
 				907FE3E428980AAE00111991 /* UIStackViewExtension.swift in Sources */,
+				9086B11B28A513CE0096477E /* AppCoordinator.swift in Sources */,
 				907FE3D72897E9AF00111991 /* ComicsRepository.swift in Sources */,
 				907FE3C92897C4FF00111991 /* Image.swift in Sources */,
 				907FE3CB2897C55D00111991 /* Comic.swift in Sources */,
@@ -555,15 +579,18 @@
 				90D34F8228A394AF00BEE61F /* UIViewControllerExtension.swift in Sources */,
 				90EE3C72289D478300897870 /* SearchPageViewController.swift in Sources */,
 				905D8EE128A284840055238D /* BottomSheet.swift in Sources */,
+				9086B11728A5053C0096477E /* HomePageCoordinator.swift in Sources */,
 				907FE3902897BE2200111991 /* SceneDelegate.swift in Sources */,
 				907FE3CD2897C5CF00111991 /* ComicDataContainer.swift in Sources */,
 				90D7BE502898FD07000D063A /* HomePageViewModelEvents.swift in Sources */,
+				9086B11328A4E4060096477E /* Coordinator.swift in Sources */,
 				907FE3C72897C45B00111991 /* CreatorList.swift in Sources */,
 				907AC7AA289BE86D0002CE3F /* TableConstants.swift in Sources */,
 				907872D128A1369500189661 /* HomePageConstants.swift in Sources */,
 				90C9424A28A13F0000C35850 /* NothingFoundView.swift in Sources */,
 				907FE3C32897C31400111991 /* Url.swift in Sources */,
 				90D7BE5228993AEB000D063A /* ListCard.swift in Sources */,
+				9086B11F28A519600096477E /* BaseCoordinator.swift in Sources */,
 				907872CF28A11EB800189661 /* SearchPageConstants.swift in Sources */,
 				907FE3CF2897C63700111991 /* ComicDataWrapper.swift in Sources */,
 				907872D428A139F300189661 /* InitialScreenView.swift in Sources */,
@@ -578,6 +605,7 @@
 				9043B20528A3EF110091DA9D /* StringExtension.swift in Sources */,
 				9031E41E28A3E0FF00ECFA58 /* ViewControllersContainer.swift in Sources */,
 				90EE3C6B289CF03B00897870 /* AlamofireViewModel.swift in Sources */,
+				9086B11928A50D310096477E /* SearchPageCoordinator.swift in Sources */,
 				905D8EE328A2D5810055238D /* DetailsPageConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
