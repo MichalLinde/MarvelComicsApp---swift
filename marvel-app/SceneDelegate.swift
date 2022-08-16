@@ -19,11 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let winScene = (scene as? UIWindowScene) else { return }
 
         window = UIWindow(windowScene: winScene)
-        let coordinatorContainer = CoordinatorContainer.sharedContainer.container
-        let appCoordinator = AppCoordinator(window: window,
-                                            homePageCoordinator: coordinatorContainer.resolve(HomePageCoordinator.self)!,
-                                            searchPageCoordinator: coordinatorContainer.resolve(SearchPageCoordinator.self)!
-                                            )
+        let vcContainer = ViewControllersContainer.sharedContainer
+        
+        let appCoordinator = AppCoordinator(window: window, vcContainer: vcContainer)
         
         appCoordinator.start()
     }

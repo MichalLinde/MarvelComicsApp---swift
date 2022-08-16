@@ -11,22 +11,24 @@ import UIKit
 class SearchPageCoordinator: Coordinator{
     var navigationController: UINavigationController?
     var searchPageVC: SearchPageViewController
+    let vcContainer: ViewControllersContainer
     
-    init(searchPageVC: SearchPageViewController){
-        self.searchPageVC = searchPageVC
+    init(vcContainer: ViewControllersContainer, navigationController: UINavigationController){
+        self.vcContainer = vcContainer
+        self.navigationController = navigationController
+        searchPageVC = vcContainer.container.resolve(SearchPageViewController.self)!
     }
     
     func eventOccured(with type: Event) {
         switch type {
         case .listElementClicked(let comic):
-            var vc: UIViewController & Coordinating = DetailsViewController(comic: comic)
-            vc.coordinator = self
+            let vc = vcContainer.container.resolve(DetailsViewController.self)!
+            vc.comic = comic
             navigationController?.pushViewController(vc, animated: true)
         }
     }
     
     func start() -> UINavigationController{
-        navigationController = UINavigationController()
         searchPageVC.coordinator = self
         navigationController?.setViewControllers([searchPageVC], animated: true)
         return navigationController!

@@ -11,13 +11,14 @@ import UIKit
 class AppCoordinator: BaseCoordinator {
         
     let window: UIWindow?
-    let homePageCoordinator: HomePageCoordinator
-    let searchPageCoordinator: SearchPageCoordinator
+    let vcContainer: ViewControllersContainer
     
-    init(window: UIWindow?, homePageCoordinator: HomePageCoordinator, searchPageCoordinator: SearchPageCoordinator){
+    let homeNavController = UINavigationController()
+    let searchNavController = UINavigationController()
+    
+    init(window: UIWindow?, vcContainer: ViewControllersContainer){
         self.window = window
-        self.homePageCoordinator = homePageCoordinator
-        self.searchPageCoordinator = searchPageCoordinator
+        self.vcContainer = vcContainer
         window?.makeKeyAndVisible()
     }
     
@@ -29,6 +30,8 @@ class AppCoordinator: BaseCoordinator {
     
     func setTabBarController() -> UITabBarController {
         let tabBar = UITabBarController()
+        let homePageCoordinator = HomePageCoordinator(vcContainer: vcContainer, navigationController: homeNavController)
+        let searchPageCoordinator = SearchPageCoordinator(vcContainer: vcContainer, navigationController: searchNavController)
         
         UITabBar.appearance().unselectedItemTintColor = .gray
         UITabBar.appearance().tintColor = .red
@@ -36,13 +39,7 @@ class AppCoordinator: BaseCoordinator {
         let homeItem = UITabBarItem(title: nil, image: UIImage(systemName: "house.fill"), tag: 0)
         let searchItem = UITabBarItem(title: nil, image: UIImage(systemName: "magnifyingglass"), tag: 1)
         
-        var controllers: [UIViewController] = []
-        
-        let homePageNC = homePageCoordinator.start()
-        let searchPageNC = searchPageCoordinator.start()
-        
-        controllers.append(homePageNC)
-        controllers.append(searchPageNC)
+        let controllers: [UIViewController] = [ homePageCoordinator.start(), searchPageCoordinator.start() ]
         
         homePageCoordinator.navigationController?.tabBarItem = homeItem
         searchPageCoordinator.navigationController?.tabBarItem = searchItem

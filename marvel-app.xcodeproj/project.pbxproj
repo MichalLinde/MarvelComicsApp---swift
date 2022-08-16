@@ -51,7 +51,6 @@
 		9086B11928A50D310096477E /* SearchPageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086B11828A50D310096477E /* SearchPageCoordinator.swift */; };
 		9086B11B28A513CE0096477E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086B11A28A513CE0096477E /* AppCoordinator.swift */; };
 		9086B11F28A519600096477E /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086B11E28A519600096477E /* BaseCoordinator.swift */; };
-		9086B12128A526210096477E /* CoordinatorContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086B12028A526210096477E /* CoordinatorContainer.swift */; };
 		90C9424A28A13F0000C35850 /* NothingFoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C9424928A13F0000C35850 /* NothingFoundView.swift */; };
 		90D34F8228A394AF00BEE61F /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D34F8128A394AF00BEE61F /* UIViewControllerExtension.swift */; };
 		90D7BE502898FD07000D063A /* HomePageViewModelEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7BE4F2898FD07000D063A /* HomePageViewModelEvents.swift */; };
@@ -131,7 +130,6 @@
 		9086B11828A50D310096477E /* SearchPageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageCoordinator.swift; sourceTree = "<group>"; };
 		9086B11A28A513CE0096477E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9086B11E28A519600096477E /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
-		9086B12028A526210096477E /* CoordinatorContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorContainer.swift; sourceTree = "<group>"; };
 		90C9424928A13F0000C35850 /* NothingFoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NothingFoundView.swift; sourceTree = "<group>"; };
 		90D34F8128A394AF00BEE61F /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		90D7BE4F2898FD07000D063A /* HomePageViewModelEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModelEvents.swift; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 				9031E41128A3D6A900ECFA58 /* ViewModelsContainer.swift */,
 				9031E41328A3D87200ECFA58 /* RepositoryContainer.swift */,
 				9031E41D28A3E0FF00ECFA58 /* ViewControllersContainer.swift */,
-				9086B12028A526210096477E /* CoordinatorContainer.swift */,
 			);
 			path = containers;
 			sourceTree = "<group>";
@@ -605,7 +602,6 @@
 				907FE3DF28980A0F00111991 /* HomePageView.swift in Sources */,
 				907FE3DD2897F4BA00111991 /* HomePageViewModel.swift in Sources */,
 				9031E41628A3D8CC00ECFA58 /* ApiClientProtocol.swift in Sources */,
-				9086B12128A526210096477E /* CoordinatorContainer.swift in Sources */,
 				9043B20528A3EF110091DA9D /* StringExtension.swift in Sources */,
 				9031E41E28A3E0FF00ECFA58 /* ViewControllersContainer.swift in Sources */,
 				90EE3C6B289CF03B00897870 /* AlamofireViewModel.swift in Sources */,
